@@ -1,7 +1,7 @@
 pipeline {
     agent {label 'sasmachine'}
     stages {
-        stage(notify){
+        stage("notify"){
            sh echo $BRANCH_NAME
         }
     }
