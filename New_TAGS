@@ -1,8 +1,10 @@
 pipeline {
-    agent {label 'sasmachine'}
+    agent any
     stages {
-        stage("notify"){
-           sh "printenv | grep BRANCH_NAME"
+        stage('notify') {
+            steps {
+                sh "printenv | grep BRANCH_NAME"
+            }
         }
     }
 }
