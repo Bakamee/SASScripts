@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('notify') {
             steps {
-                sh "printenv | grep BRANCH_NAME"
+                sh "printenv"
             }
         }
     }
