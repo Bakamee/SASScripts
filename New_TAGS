@@ -2,7 +2,7 @@ pipeline {
     agent {label 'sasmachine'}
     stages {
         stage("notify"){
-           sh echo $BRANCH_NAME
+           sh "printenv | grep BRANCH_NAME"
         }
     }
 }
