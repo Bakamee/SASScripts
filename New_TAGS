@@ -2,6 +2,9 @@ pipeline {
     agent any
     stages {
         stage('notify') {
+            when {
+                branch "/origin/dev"
+            }
             steps {
                 sh "printenv"
             }
