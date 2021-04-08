@@ -19,7 +19,7 @@ pipeline{
         stage('Checkout to Production'){
             String tag = ${ref}
             steps{
-             echo "Tag namee ${ref}"
+             echo "Tag name ${ref}"
              assert r =~ /(.*)tag(.*)/
             }
 
