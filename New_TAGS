@@ -3,7 +3,7 @@ pipeline{
     agent {label "sasmachine"}
     environment{
     tag = ${ref}
-    var="null"
+    var="nulll"
     }
     stages{
         
