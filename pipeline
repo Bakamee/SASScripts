@@ -16,7 +16,7 @@ pipeline{
         stage('Checkout to Production'){
             when {
                 expression{
-                    ${ref}  == "*trunk"
+                    "${ref}"  == "*trunk"
                 }
             }
             steps{
