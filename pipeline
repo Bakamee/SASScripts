@@ -1,4 +1,9 @@
 pipeline{
+   script{
+       def tag = "${ref}"
+       def tagID = tag.split("/")
+   }
+
     agent {label "sasmachine"}
     stages{
         stage('prepare'){
@@ -14,7 +19,7 @@ pipeline{
         }
         stage('Checkout to Production'){
             steps{
-             echo "Tag name ${ref}"
+             echo "Tag name ${tagID}"
             }
 
         }
