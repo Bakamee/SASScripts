@@ -19,13 +19,13 @@ pipeline{
         stage('Checkout to Production'){
             steps{
              script{
-                 if ("${ref}" =~ /(.*)tag(.*)/ && ${tag_delete}==false){
+                 if ("${ref}" =~ /(.*)tag(.*)/ && ${tagdelete}==false){
                      echo "it was tag"
                  }else{
                      echo "it was not a tag"
                  }
              } 
-            echo "${tag_delete}"
+            echo "${tagdelete}"
             }
 
         }
