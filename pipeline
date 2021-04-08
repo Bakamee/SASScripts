@@ -17,8 +17,10 @@ pipeline{
             }
         }
         stage('Checkout to Production'){
+            String tag = ${ref}
             steps{
              echo "Tag name ${ref}"
+             assert r =~ /(.*)tag(.*)/
             }
 
         }
