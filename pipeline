@@ -5,6 +5,19 @@ pipeline{
             steps{
                 sh "echo helloworld"
             }
+        stage('New Code'){
+            steps{
+             echo "new code commited"
+             
+            }
+        }
+        stage('Checkout to Production'){
+            steps{
+             echo "Tag name ${ref}"
+            }
+
+        }
+        
         }
     } 
 }   
