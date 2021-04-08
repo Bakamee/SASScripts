@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Checkout to Production'){
             when {
-               environment ignoreCase: true, name: 'ref', value: 'tag'
+               environment ignoreCase: true, name: 'ref', value: "${ref}"
             }
             steps{
              echo "Tag name ${tagID}"
