@@ -1,13 +1,23 @@
-pipeline {
-    agent any
-    stages {
-        stage('notify') {
-            when {
-                branch "/origin/trunk"
-            }
-            steps {
-                sh "printenv"
+pipeline{
+
+    agent {label "sasmachine"}
+    environment{
+    def tag = ${ref}.tokenize('/')[-1]
+    var="null"
+    }
+    stages{
+        
+        stage ("New Code Developed"){
+            steps{
+                echo "new dev code commited, needs to be productionised"
+                 sh "echo ${tag}"
             }
         }
+        stage("Checkout to Prod"){
+            steps {
+             echo "checkout steps"
+            }
+        }
+        
     }
 }
