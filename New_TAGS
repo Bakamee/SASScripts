@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage(prepare){
             steps{
-            sh "echo `${tag##*:}`"
+            sh "echo ${${ref}##*:}"
             }
           
         }
