@@ -1,4 +1,4 @@
-libname orion "/folders/myshortcuts/SAS_projects/DidiesFiles/ecpr363r";
+libname orion "/opt/sas/data";
 *******************Practice level 1*************************;
 
 proc print data=orion.orderfact;
