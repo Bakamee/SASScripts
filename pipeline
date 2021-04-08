@@ -13,8 +13,9 @@ pipeline{
             }
             steps{
              echo "new code commited"
-             //Other steps followed when new code is released. 
-             //E.g. email release manager to test and productionise code by tagging it. 
+             echo" Other steps which usually happen when code in developed can be executed."
+             echo "E.g. automatically run jobs on SAS Dev Server and notify business."
+             echo "Once signed, off, release mananager can productionise(Tag)" 
             }
         }
         stage('Checkout to Production'){
@@ -25,8 +26,8 @@ pipeline{
             }
             steps{
                 echo "checkout to prod" 
-                //Other steps followed after code is productionised(tagged)
-                //E.g. Execute code in SAS environment and notify users of results.
+                echo Other steps followed after code is productionised(tagged)
+                echo "E.g. Execute code in SAS Production environment and notify users of results."
             }
 
         }
