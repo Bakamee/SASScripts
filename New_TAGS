@@ -13,7 +13,7 @@ pipeline{
                  sh "echo ${tag}"
             }
         }
-        stage("Checkout to Prod"){
+        stage("Checkout  to Prod"){
             steps {
              echo "checkout steps"
             }
