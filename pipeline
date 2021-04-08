@@ -20,7 +20,7 @@ pipeline{
          
             steps{
                 echo "checkout to prod"
-                echo " tag: ${ref}   tag operation: ${tag_delete}"
+                echo " tag: ${ref}   tag operation: ${deleted}"
             }
 
         }
