@@ -17,10 +17,15 @@ pipeline{
             }
         }
         stage('Checkout to Production'){
-            String tag = ${ref}
             steps{
-             echo "Tag name ${ref}"
-             assert r =~ /(.*)tag(.*)/
+             script{
+                 if ("${ref}" =~ /(.*)tag(.*)/){
+                     echo "it was tag"
+                 }else{
+                     echo "it was not a tag"
+                 }
+             } 
+            
             }
 
         }
