@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('notify') {
             when {
-                branch "/origin/dev"
+                branch "/origin/trunk"
             }
             steps {
                 sh "printenv"
