@@ -13,7 +13,8 @@ pipeline{
             }
             steps{
              echo "new code commited"
-             
+             //Other steps followed when new code is released. 
+             //E.g. email release manager to test and productionise code by tagging it. 
             }
         }
         stage('Checkout to Production'){
@@ -24,6 +25,8 @@ pipeline{
             }
             steps{
                 echo "checkout to prod" 
+                //Other steps followed after code is productionised(tagged)
+                //E.g. Execute code in SAS environment and notify users of results.
             }
 
         }
