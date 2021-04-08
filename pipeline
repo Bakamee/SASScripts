@@ -8,15 +8,15 @@ pipeline{
             }
         }
         stage('New Code'){
+             when {
+               environment ignoreCase: true, name: 'ref', value: 'refs/heads/trunk'
+            }
             steps{
              echo "new code commited"
              
             }
         }
         stage('Checkout to Production'){
-            when {
-               environment ignoreCase: true, name: 'ref', value: 'refs/heads/trunk'
-            }
             steps{
              echo "Tag name ${ref}"
             }
