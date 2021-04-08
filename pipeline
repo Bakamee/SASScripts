@@ -15,9 +15,7 @@ pipeline{
         }
         stage('Checkout to Production'){
             when {
-                expression{
-                    "${ref}"  == "*trunk"
-                }
+               environment ignoreCase: true, name: 'ref', value: 'tag'
             }
             steps{
              echo "Tag name ${tagID}"
