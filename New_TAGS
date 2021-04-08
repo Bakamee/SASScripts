@@ -2,7 +2,7 @@ pipeline{
 
     agent {label "sasmachine"}
     environment{
-    def tag = env.ref.tokenize('/')[-1]
+    tag = ${ref}
     var="null"
     }
     stages{
