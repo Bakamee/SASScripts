@@ -16,7 +16,7 @@ pipeline{
         stage ("New Code Developed"){
             steps{
                 echo "new dev code commited, needs to be productionised"
-                  sh 'echo ${`echo $ref`##*:}'
+                  sh 'echo ${$ref##*:}'
             }
         }
         stage("Checkout  to Prod"){
