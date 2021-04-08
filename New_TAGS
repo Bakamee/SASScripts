@@ -1,16 +1,14 @@
 pipeline{
 
-def tag = "${ref}"
-def last = tag.tokenize('/')[-1]
     agent {label "sasmachine"}
     environment{
     tag = "${ref}"
     }
     stages{
-        def tag = tag.
+
         stage(prepare){
             steps{
-            sh "echo ${last}" 
+            sh "echo ${ref}" 
             }
           
         }
