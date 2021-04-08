@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('prepare'){
             steps{
-                sh "echo helloworld"
+               echo " tag: ${ref}    tag operation: ${deleted}"
             }
         }
         stage('New Code'){
@@ -23,8 +23,7 @@ pipeline{
                 }
             }
             steps{
-                echo "checkout to prod"
-                echo " tag: ${ref}    tag operation: ${deleted}"
+                echo "checkout to prod" 
             }
 
         }
