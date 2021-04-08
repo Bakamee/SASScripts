@@ -14,6 +14,11 @@ pipeline{
             }
         }
         stage('Checkout to Production'){
+            when {
+                expression{
+                    ${ref}  == "*trunk"
+                }
+            }
             steps{
              echo "Tag name ${tagID}"
             }
