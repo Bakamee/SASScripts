@@ -17,10 +17,14 @@ pipeline{
             }
         }
         stage('Checkout to Production'){
-         
+            when{
+                expression{
+                "${ref}" =~ /(.*)tag(.*)/ && "${deleted}"==false
+                }
+            }
             steps{
                 echo "checkout to prod"
-                echo " tag: ${ref}   tag operation: ${deleted}"
+                echo " tag: ${ref}    tag operation: ${deleted}"
             }
 
         }
