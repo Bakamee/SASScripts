@@ -6,6 +6,9 @@ pipeline{
     var="null"
     }
     stages{
+        stage(prepare){
+           sh "echo ${ref##*/}"
+        }
         
         stage ("New Code Developed"){
             steps{
