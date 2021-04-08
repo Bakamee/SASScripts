@@ -19,9 +19,6 @@ pipeline{
             }
         }
         stage("Checkout  to Prod"){
-            when{
-                tag "M*"
-                }
             steps {
              echo "checkout steps"
             }
