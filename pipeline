@@ -1,8 +1,4 @@
 pipeline{
-   script{
-       def tag = "${ref}"
-       def tagID = tag.split("/")
-   }
 
     agent {label "sasmachine"}
     stages{
