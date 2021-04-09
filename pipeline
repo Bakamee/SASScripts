@@ -6,7 +6,7 @@ pipeline{
             steps{
          
                echo "Tag ref: ${ref}"  
-               echo "Event type: {event_type}" 
+               echo "Event type: ${event_type}" 
                echo "Git user: ${git_user} "
                echo "Delete operation: ${deleted}"
     
