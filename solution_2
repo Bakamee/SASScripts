@@ -11,6 +11,7 @@ pipeline{
                echo "Git ref type: ${ref_type}"
                echo "Tag name:  ${tag}"
                echo "Delete operation: ${deleted}"
+               sh "whoami"
     
             }
         }
@@ -34,7 +35,7 @@ pipeline{
                 echo "//checkout to prod" 
                 echo "Other steps followed after code is productionised(tagged)\n.E.g. Execute code in SAS Production environment and notify users of results."
                 //sh "sudo /opt/sas/data/git_source/resources/checkout_tag.sh ${tag}"
-                sh "whoami"
+               
             }
 
         }
