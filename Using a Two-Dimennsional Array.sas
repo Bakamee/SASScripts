@@ -14,7 +14,7 @@ run;
 proc print data=customercoupons(obs=5);
 run;
 
-*******************Practice level 2************************;
+*******************Practice level 2***********************;
 
 data combine(drop=prodln prodid);
 	format prodID 2.;
