@@ -7,7 +7,7 @@ pipeline{
          
                echo "Tag ref: ${ref}"  
                echo "Git user: ${git_user} "
-               echo "Git event type:  ${allt}" 
+               echo "Git event type:  ${Accept}" 
                echo "Delete operation: ${deleted}"
     
             }
