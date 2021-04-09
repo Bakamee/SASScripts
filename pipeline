@@ -7,7 +7,7 @@ pipeline{
                echo "Tag: ${ref}"   
                echo "Git user: ${login} "
                echo "Delete operation: ${deleted}"
-               echo ""
+    
             }
         }
         stage('New Code'){
