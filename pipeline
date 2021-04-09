@@ -4,7 +4,8 @@ pipeline{
     stages{
         stage('prepare'){
             steps{
-               echo " tag: ${ref}    tag operation: ${deleted}"
+               echo " tag: ${ref}   
+               echo "delete operation: ${deleted}"
             }
         }
         stage('New Code'){
