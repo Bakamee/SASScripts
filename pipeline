@@ -5,7 +5,8 @@ pipeline{
         stage('prepare'){
             steps{
          
-               echo "Tag ref: ${ref}"   
+               echo "Tag ref: ${ref}"  
+               echo "Event type: {event_type}" 
                echo "Git user: ${git_user} "
                echo "Delete operation: ${deleted}"
     
