@@ -18,7 +18,7 @@ pipeline{
             }
             steps{
              echo "new code commited"
-             sh "printf Other steps which usually happen when code in developed can be executed.\nE.g. automatically run jobs on SAS Dev Server and notify business,\nonce signed, off, release mananager can productionise(Tag)."
+             sh printf 'Other steps which usually happen when code in developed can be executed.\nE.g. automatically run jobs on SAS Dev Server and notify business,\nonce signed, off, release mananager can productionise(Tag).'
             }
         }
         stage('Checkout to Production'){
@@ -29,7 +29,7 @@ pipeline{
             }
             steps{
                 echo "checkout to prod" 
-                sh "printf Other steps followed after code is productionised(tagged)\n.E.g. Execute code in SAS Production environment and notify users of results."
+                sh 'printf Other steps followed after code is productionised(tagged)\n.E.g. Execute code in SAS Production environment and notify users of results.'
             }
 
         }
