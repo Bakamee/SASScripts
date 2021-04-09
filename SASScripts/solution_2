@@ -1,0 +1,44 @@
+pipeline{
+
+    agent {label "master"}
+    stages{
+        stage('prepare'){
+            steps{
+         
+               echo "Tag ref: ${ref}"  
+               echo "Git user: ${git_user} "
+               echo "Git event type:  ${x_github_event}"
+               echo "Git ref type: ${ref_type}"
+               echo "Tag name:  ${tag}"
+               echo "Delete operation: ${deleted}"
+               sh "whoami"
+    
+            }
+        }
+        stage('New Code'){
+             when {
+               environment ignoreCase: true, name: 'ref', value: 'refs/heads/trunk'
+            }
+            steps{
+             echo "//new code commited."
+             echo "//Other steps which usually happen when code in developed can be executed.\nE.g. automatically run jobs on SAS Dev Server and notify business,\nonce signed, off, release mananager can productionise(Tag)."
+            }
+        }
+        stage('Checkout to Production'){
+            when{
+                expression{
+                 "${ref}" =~ /refs\/tags(.*)/ && "${deleted}"=="false"
+                }
+            }
+            steps{
+                echo "//checkout to prod" 
+                echo "Other steps followed after code is productionised(tagged)\n.E.g. Execute code in SAS Production environment and notify users of results."
+                sh "sudo /opt/sasdata/resources/checkout_tag.sh ${tag}"
+               
+            }
+
+        }
+
+        
+    } 
+}   
