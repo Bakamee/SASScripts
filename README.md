@@ -1,2 +1,2 @@
 ## SASScripts
--TAG: v1.0.2
+*TAG: v1.0.2
