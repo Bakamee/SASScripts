@@ -8,7 +8,7 @@ pipeline{
                echo "Tag ref: ${ref}"  
                echo "Git user: ${git_user} "
                echo "Git event type:  ${x_github_event}"
-               echo "Git event type: ${ref_type}"
+               echo "Git ref type: ${ref_type}"
                echo "Delete operation: ${deleted}"
     
             }
@@ -25,7 +25,7 @@ pipeline{
         stage('Checkout to Production'){
             when{
                 expression{
-                "${ref}" =~ /(.*)tags(.*)/ && "${deleted}"=="false"
+                "${ref_type}" == "tag" && "${deleted}"=="false"
                 }
             }
             steps{
