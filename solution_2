@@ -33,7 +33,7 @@ pipeline{
             steps{
                 echo "//checkout to prod" 
                 echo "Other steps followed after code is productionised(tagged)\n.E.g. Execute code in SAS Production environment and notify users of results."
-                sh "/opt/sas/data/git_source/resources/checkout_tag.sh ${tag}"
+                sh "sudo /opt/sas/data/git_source/resources/checkout_tag.sh ${tag}"
             }
 
         }
