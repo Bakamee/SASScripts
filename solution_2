@@ -9,7 +9,7 @@ pipeline{
                echo "Git user: ${git_user} "
                echo "Git event type:  ${x_github_event}"
                echo "Git ref type: ${ref_type}"
-               echo "Tag name: ${tag}"
+               echo "Tag name:  ${tag}"
                echo "Delete operation: ${deleted}"
     
             }
