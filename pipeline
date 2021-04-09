@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('prepare'){
             steps{
-               echo " tag: ${ref}   
+               echo " tag: ${ref}"   
                echo "delete operation: ${deleted}"
             }
         }
