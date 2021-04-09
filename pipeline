@@ -21,7 +21,7 @@ pipeline{
         stage('Checkout to Production'){
             when{
                 expression{
-                "${ref}" =~ /(.*)tag(.*)/ && "${deleted}"=="false"
+                "${ref}" =~ /(.*)tags(.*)/ && "${deleted}"=="false"
                 }
             }
             steps{
