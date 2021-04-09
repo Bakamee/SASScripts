@@ -1,5 +1,5 @@
 libname orion "/opt/sas/data";
-*******************Practice level 1**************************;
+*******************Practice level 1***************************;
 
 proc print data=orion.orderfact;
 run;
