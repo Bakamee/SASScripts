@@ -1,4 +1,4 @@
-libname orion "/opt/sas/sasdata";
+libname orion "/opt/sas/newsasdata/orion1";
 
 
 data countryinfo();
